@@ -220,12 +220,12 @@ msgstr "Последние посещение"
 #: app/templates/user.html:13
 #, python-format
 msgid "%(count)d followers"
-msgstr "Ваших подписчиков %(count)d"
+msgstr "подписчиков: %(count)d"
 
 #: app/templates/user.html:13
 #, python-format
 msgid "%(count)d following"
-msgstr "У вас в подписке %(count)d"
+msgstr "подписок: %(count)d"
 
 #: app/templates/user.html:15
 msgid "Edit your profile"
