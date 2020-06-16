@@ -17,7 +17,7 @@ def send_email(subject, sender, recipients, text_body, html_body, attachments=No
         for attachment in attachments:
             msg.attach(*attachment)
 
-    if sync:
+    if False:
         mail.send(msg)
     else:
         Thread(target=send_async_email, args=(current_app._get_current_object(), msg)).start()
