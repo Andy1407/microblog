@@ -23,3 +23,5 @@ migrations/__pycache__/
 migrations/versions/3745b495ccab_private_messages.py
 migrations/versions/__pycache__/
 migrations/versions/abe0170011ab_notifications.py
+dump.rdb
+migrations/versions/c9315a000e50_tasks.py

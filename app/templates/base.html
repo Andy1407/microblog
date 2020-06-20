@@ -103,7 +103,7 @@
             var xhr = null
             $('.user_popup').hover(
                 function (event) {
-                    const elem = $(event.currentTarget);
+                    var elem = $(event.currentTarget)
                     timer = setTimeout(function () {
                         timer = null
                         xhr = $.ajax(

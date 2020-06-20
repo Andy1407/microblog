@@ -20,5 +20,6 @@ class Config(object):
     LANGUAGES = ['en', 'ru']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    SECURITY_EMAIL_SENDER = 'malinkinandrey4@gmail.com'
     POSTS_PER_PAGE = 25
     REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
