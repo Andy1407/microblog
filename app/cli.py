@@ -33,3 +33,9 @@ def register(app):
         if os.system('pybabel init -i messages.pot -d app/translations -l ' + lang):
             raise RuntimeError('init command failed')
         os.remove('messages.pot')
+
+    @app.cli.group()
+    def clear():
+        from app import db
+        db.drop_all()
+        db.create_all()
