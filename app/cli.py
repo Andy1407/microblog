@@ -36,6 +36,10 @@ def register(app):
 
     @app.cli.group()
     def clear():
+        pass
+
+    @clear.command()
+    def clear2():
         from app import db
         db.drop_all()
         db.create_all()
