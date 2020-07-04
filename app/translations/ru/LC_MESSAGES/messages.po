@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-15 18:21+0300\n"
+"POT-Creation-Date: 2020-07-02 12:02+0300\n"
 "PO-Revision-Date: 2020-06-07 14:54+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -176,10 +176,6 @@ msgstr "Отправить Сообщение"
 msgid "An export task is currently in progress"
 msgstr "В настоящее время задача по экспорту в процессе"
 
-#: app/main/routes.py:198
-msgid "Exporting posts..."
-msgstr "Экспорт постов..."
-
 #: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -189,23 +185,31 @@ msgstr "%(username)s сообщает %(when)s"
 msgid "Translate"
 msgstr "Перевести"
 
+#: app/templates/_post.html:39
+msgid "remove"
+msgstr "удалить"
+
+#: app/templates/base.html:4
+msgid "Welcome to Microblog"
+msgstr "Добро Пожаловать в Microblog"
+
 #: app/templates/base.html:34
 msgid "Login"
 msgstr "Войти"
 
-#: app/templates/base.html:38 app/templates/messages.html:4
+#: app/templates/base.html:37 app/templates/messages.html:4
 msgid "Messages"
 msgstr "Сообщения"
 
-#: app/templates/base.html:47
+#: app/templates/base.html:46
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/base.html:49
+#: app/templates/base.html:48
 msgid "Logout"
 msgstr "Выйти"
 
-#: app/templates/base.html:168
+#: app/templates/base.html:97
 msgid "Error: Could not contact server."
 msgstr "Ошибка: не удалось связаться с сервером."
 
@@ -214,11 +218,11 @@ msgstr "Ошибка: не удалось связаться с сервером
 msgid "Hi, %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:54
+#: app/templates/index.html:17 app/templates/user.html:62
 msgid "Newer posts"
 msgstr "Новые посты"
 
-#: app/templates/index.html:22 app/templates/user.html:59
+#: app/templates/index.html:22 app/templates/user.html:67
 msgid "Older posts"
 msgstr "Старие посты"
 
@@ -271,17 +275,17 @@ msgstr "Изменить свой профиль"
 
 #: app/templates/user.html:20
 msgid "Export your posts"
-msgstr "Экспорт ваших постов"
+msgstr "Отправить ваши посты"
 
-#: app/templates/user.html:28 app/templates/user_popup.html:19
+#: app/templates/user.html:36 app/templates/user_popup.html:19
 msgid "Follow"
 msgstr "Подписаться"
 
-#: app/templates/user.html:35 app/templates/user_popup.html:23
+#: app/templates/user.html:43 app/templates/user_popup.html:23
 msgid "Unfollow"
 msgstr "Отписаться"
 
-#: app/templates/user.html:41
+#: app/templates/user.html:49
 msgid "Send private message"
 msgstr "Отправить личное сообщение"
 
@@ -320,4 +324,7 @@ msgstr "Упс! Произошла непредвиденная ошибка"
 #: app/templates/errors/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "Администратор был уведомлен об этом. Извините за доставленные неудобства!"
+
+msgid "Exporting posts..."
+msgstr "Экспорт постов..."
 

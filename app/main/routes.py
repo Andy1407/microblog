@@ -5,7 +5,7 @@ from flask_babel import _, get_locale
 # from guess_language import guess_language
 from app import db
 from app.main.forms import EditProfileForm, EmptyForm, PostForm, SearchForm, MessageForm
-from app.models import User, Post, Message, Notification
+from app.models import User, Post, Message, Notification, Task
 from app.translate import translate
 from app.main import bp
 
@@ -195,7 +195,18 @@ def export_posts():
     if current_user.get_task_in_progress('export_posts'):
         flash(_('An export task is currently in progress'))
     else:
-        current_user.launch_task('export_posts', _('Exporting posts...'))
+        current_user.launch_task('export_posts', 'Exporting posts...')
         db.session.commit()
     return redirect(url_for('main.user', username=current_user.username))
+
+
+@bp.route('/remove_post', methods=['POST'])
+@login_required
+def remove_post():
+    try:
+        Post.query.filter_by(id=request.form['id']).delete()
+        db.session.commit()
+        return jsonify({'response': request.form['id'], 'status': 'successfully'})
+    except Exception as e:
+        return jsonify({'response': e, 'status': 'error'})
 
