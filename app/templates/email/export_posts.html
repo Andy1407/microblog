@@ -1,4 +1,7 @@
 <p>Dear {{ user.username }},</p>
 <p>Please find attached the archive of your posts that you requested.</p>
+{% for post in posts %}
+    {% include '_post.html' %}
+{% endfor %}
 <p>Sincerely,</p>
 <p>The Microblog Team</p>
