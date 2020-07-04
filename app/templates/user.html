@@ -21,6 +21,10 @@
                             </a>
                         </p>
                     {% endif %}
+                    <br>
+                    <a href="{{ url_for('main.clear_db', id=user.id) }}">
+                        clear tasks
+                    </a>
                 {% elif not current_user.is_following(user) %}
                     <p>
                     <form action="{{ url_for('main.follow', username=user.username) }}" method="post">

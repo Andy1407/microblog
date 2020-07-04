@@ -200,6 +200,14 @@ def export_posts():
     return redirect(url_for('main.user', username=current_user.username))
 
 
+@bp.route('/clear_db/<id>')
+def clear_db(id):
+    Task.query.filter_by(user_id=id).delete()
+    db.session.commit()
+
+    return redirect(url_for('main.user', username=current_user.username))
+
+
 @bp.route('/remove_post', methods=['POST'])
 @login_required
 def remove_post():
