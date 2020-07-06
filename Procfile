@@ -1,2 +1,2 @@
 web: flask db upgrade; flask translate compile; gunicorn microblog:app
-worker: rq worker microblog-tasks
+worker: rq worker microblog-tasks --url redis://h:p0157507dd15bac5d969391fd8262282952efee0ce20d8ef2d9dc0f1cc16071e4@ec2-54-87-144-92.compute-1.amazonaws.com:30099
