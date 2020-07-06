@@ -217,4 +217,3 @@ def remove_post():
         return jsonify({'response': request.form['id'], 'status': 'successfully'})
     except Exception as e:
         return jsonify({'response': e, 'status': 'error'})
-
