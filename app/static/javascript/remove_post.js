@@ -1,5 +1,5 @@
 function remove_post(id) {
-    let current_post = document.querySelector(`#post-${id}`)
+    let current_post = $(`#post-${id}`)
 
 
     $.post('/remove_post', {
