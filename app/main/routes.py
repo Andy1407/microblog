@@ -215,8 +215,9 @@ def clear_db(id):
 def remove_post():
     try:
         post = Post.query.filter_by(id=request.form['id'])
+        remove_from_index('post', post.first())
         post.delete()
-        remove_from_index('post', post)
+
         db.session.commit()
         return jsonify({'response': request.form['id'], 'status': 'successfully'})
     except Exception as e:
