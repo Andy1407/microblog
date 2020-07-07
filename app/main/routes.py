@@ -214,8 +214,9 @@ def clear_db(id):
 @login_required
 def remove_post():
     try:
-        Post.query.filter_by(id=request.form['id']).delete()
-        remove_from_index(Post.__tablename__, Post)
+        post = Post.query.filter_by(id=request.form['id'])
+        post.delete()
+        remove_from_index(Post.__tablename__, post)
         db.session.commit()
         return jsonify({'response': request.form['id'], 'status': 'successfully'})
     except Exception as e:
