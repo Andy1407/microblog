@@ -127,7 +127,7 @@ msgstr "Ваш пост теперь в прямом эфире!"
 
 #: app/main/routes.py:42 app/templates/base.html:22
 msgid "Home"
-msgstr "Домой"
+msgstr "Главная"
 
 #: app/main/routes.py:75
 msgid "Your changes have been saved."
