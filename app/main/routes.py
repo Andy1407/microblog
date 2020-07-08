@@ -206,9 +206,9 @@ def export_posts():
 @login_required
 def remove_post():
     try:
-        post = Post.query.filter_by(id=request.form['id'])
-        remove_from_index('post', post.first())
-        post.delete()
+        post = Post.query.filter_by(id=request.form['id']).first()
+
+        db.session.delete(post)
         db.session.commit()
 
         return jsonify({'response': request.form['id'], 'status': 'successfully'})
