@@ -23,6 +23,7 @@
                         </p>
                     {% endif %}
                     <br>
+                    <a></a>
                 {% elif not current_user.is_following(user) %}
                     <p>
                     <form action="{{ url_for('main.follow', username=user.username) }}" method="post">
