@@ -8,7 +8,6 @@ from app.main.forms import EditProfileForm, EmptyForm, PostForm, SearchForm, Mes
 from app.models import User, Post, Message, Notification, Task
 from app.translate import translate
 from app.main import bp
-from app.search import remove_from_index
 
 
 @bp.before_app_request
