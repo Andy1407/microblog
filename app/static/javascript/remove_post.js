@@ -25,17 +25,14 @@ function remove_post(id, message) {
                 current_post.show()
                 alert(response['response'])
             } else if (response['status'] === 'successfully') {
-                toast(message, undefined, undefined, "#323232", "#ffffff", function () {
-                    current_post.remove()
-                })
-
+                current_post.remove()
+                toast(message, undefined, undefined, '#323232', '#ffffff')
             }
         })
     })
 
 
 }
-
 
 function animation(current_post, posts, id, onFinish = function () {
 }) {
