@@ -1,13 +1,11 @@
 function remove_post(id) {
-    let current_post = $(`#post-${id}`)
+    let current_post = $(`#thisPost${id}`)
     let current_post2 = document.getElementById(`post-${id}`)
     let posts = Array.from(document.getElementById('posts').children)
 
     document.getElementById(`thisPost${id}`).style.overflow = 'hidden'
 
-    let anim = current_post2.animate({transform: `translate(0px, -${current_post2.clientHeight}px)`}, 400)
-
-    anim.addEventListener('finish', function () {
+    animation(current_post2, posts, id, function () {
         current_post.hide()
 
         $.post('/remove_post', {
@@ -17,29 +15,35 @@ function remove_post(id) {
                 current_post.show()
                 alert(response['response'])
             } else if (response['status'] === 'successfully') {
-                $(`#thisPost${id}`).remove()
+                current_post.remove()
             }
         })
     })
 
+
+}
+
+
+function animation(current_post, posts, id, onFinish = function () {
+}) {
+
+    let anim = current_post.animate({transform: `translate(0px, -${current_post.clientHeight}px)`}, 400)
+
+    anim.addEventListener('finish', onFinish)
+
     let afterPost = false
-    let lastPost = current_post2
+    let lastPost = current_post
     posts.forEach(post => {
-        if (afterPost) {
+        if (afterPost && lastPost.style.display !== 'none' && $(post).is(":visible")) {
             let distance = post.getBoundingClientRect().top - lastPost.getBoundingClientRect().top
-            let animate = post.animate({transform: `translate(0px, -${distance}px)`}, 400)
             lastPost = post
+            let animate = post.animate({transform: `translate(0px, -${distance}px)`}, 400)
+
         }
         if (post.id === `thisPost${id}`) {
             afterPost = true
         }
     })
-
-
-
-}
-
-function cancel() {
 
 
 }

@@ -78,6 +78,7 @@
         {# application content needs to be provided in the app_content block #}
         {% block app_content %}{% endblock %}
     </div>
+    <div id="toasts" style="right: 200px; position: fixed"></div>
 {% endblock %}
 
 {% block scripts %}
@@ -134,4 +135,5 @@
 
     <script src="../static/javascript/popup.js"></script>
     <script src="../static/javascript/remove_post.js"></script>
+    <script src="../static/javascript/toast.js"></script>
 {% endblock %}

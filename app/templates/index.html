@@ -9,9 +9,7 @@
     {% endif %}
     <div id="posts">
         {% for post in posts %}
-            <div id="thisPost{{ post.id }}">
                 {% include '_post.html' %}
-            </div>
         {% endfor %}
 
         <nav aria-label="...">
