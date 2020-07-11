@@ -1,4 +1,14 @@
-function remove_post(id) {
+$(document).ready(function () {
+    let a = setTimeout(function () {
+        let elem = Array.from(document.getElementsByClassName('alert alert-info'))
+        elem.forEach(elem => {
+            elem.remove()
+        })
+
+    }, 10000)
+})
+
+function remove_post(id, message) {
     let current_post = $(`#thisPost${id}`)
     let current_post2 = document.getElementById(`post-${id}`)
     let posts = Array.from(document.getElementById('posts').children)
@@ -15,7 +25,10 @@ function remove_post(id) {
                 current_post.show()
                 alert(response['response'])
             } else if (response['status'] === 'successfully') {
-                current_post.remove()
+                toast(message, undefined, undefined, "#323232", "#ffffff", function () {
+                    current_post.remove()
+                })
+
             }
         })
     })

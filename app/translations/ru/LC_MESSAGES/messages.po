@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-02 12:02+0300\n"
+"POT-Creation-Date: 2020-07-11 22:43+0300\n"
 "PO-Revision-Date: 2020-06-07 14:54+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: app/__init__.py:23
+#: app/__init__.py:24
 msgid "Please log in to access this page."
 msgstr "Пожалуйста, войдите в систему, чтобы получить доступ к этой странице."
 
@@ -113,7 +113,7 @@ msgstr "Отправить"
 msgid "Say something"
 msgstr "Скажите что-нибудь"
 
-#: app/main/forms.py:35 app/main/routes.py:147
+#: app/main/forms.py:35 app/main/routes.py:148
 msgid "Search"
 msgstr "Поиск"
 
@@ -164,28 +164,32 @@ msgstr "Вы отписались от %(username)s."
 msgid "Explore"
 msgstr "Исследовать"
 
-#: app/main/routes.py:160
+#: app/main/routes.py:161
 msgid "Your message has been sent."
 msgstr "Ваше сообщение было отправлено"
 
-#: app/main/routes.py:162
+#: app/main/routes.py:163
 msgid "Send Message"
 msgstr "Отправить Сообщение"
 
-#: app/main/routes.py:196
+#: app/main/routes.py:197
 msgid "An export task is currently in progress"
 msgstr "В настоящее время задача по экспорту в процессе"
 
-#: app/templates/_post.html:16
+#: app/templates/_post.html:17
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s сообщает %(when)s"
 
-#: app/templates/_post.html:27
+#: app/templates/_post.html:28
 msgid "Translate"
 msgstr "Перевести"
 
-#: app/templates/_post.html:39
+#: app/templates/_post.html:36
+msgid "your post was deleted"
+msgstr "Ваш пост удален"
+
+#: app/templates/_post.html:37
 msgid "remove"
 msgstr "удалить"
 
@@ -209,7 +213,7 @@ msgstr "Профиль"
 msgid "Logout"
 msgstr "Выйти"
 
-#: app/templates/base.html:97
+#: app/templates/base.html:98
 msgid "Error: Could not contact server."
 msgstr "Ошибка: не удалось связаться с сервером."
 
@@ -218,19 +222,19 @@ msgstr "Ошибка: не удалось связаться с сервером
 msgid "Hi, %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:62
+#: app/templates/index.html:19 app/templates/user.html:57
 msgid "Newer posts"
 msgstr "Новые посты"
 
-#: app/templates/index.html:22 app/templates/user.html:67
+#: app/templates/index.html:24 app/templates/user.html:62
 msgid "Older posts"
 msgstr "Старие посты"
 
-#: app/templates/messages.html:12
+#: app/templates/messages.html:13
 msgid "Newer messages"
 msgstr "Новые сообщения"
 
-#: app/templates/messages.html:17
+#: app/templates/messages.html:18
 msgid "Older messages"
 msgstr "Старые сообщения"
 
@@ -238,11 +242,11 @@ msgstr "Старые сообщения"
 msgid "Search Results"
 msgstr "Результаты поиска"
 
-#: app/templates/search.html:13
+#: app/templates/search.html:14
 msgid "Previous results"
 msgstr "Предыдущие результаты"
 
-#: app/templates/search.html:18
+#: app/templates/search.html:19
 msgid "Next results"
 msgstr "Следующие результаты"
 
@@ -264,28 +268,28 @@ msgstr "Последние посещение"
 msgid "%(count)d followers"
 msgstr "подписчиков: %(count)d"
 
-#: app/templates/user.html:13 app/templates/user_popup.html:15
+#: app/templates/user.html:14 app/templates/user_popup.html:15
 #, python-format
 msgid "%(count)d following"
 msgstr "подписок: %(count)d"
 
-#: app/templates/user.html:15
+#: app/templates/user.html:16
 msgid "Edit your profile"
 msgstr "Изменить свой профиль"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:21
 msgid "Export your posts"
 msgstr "Отправить ваши посты"
 
-#: app/templates/user.html:36 app/templates/user_popup.html:19
+#: app/templates/user.html:30 app/templates/user_popup.html:19
 msgid "Follow"
 msgstr "Подписаться"
 
-#: app/templates/user.html:43 app/templates/user_popup.html:23
+#: app/templates/user.html:37 app/templates/user_popup.html:23
 msgid "Unfollow"
 msgstr "Отписаться"
 
-#: app/templates/user.html:49
+#: app/templates/user.html:43
 msgid "Send private message"
 msgstr "Отправить личное сообщение"
 
@@ -325,6 +329,6 @@ msgstr "Упс! Произошла непредвиденная ошибка"
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "Администратор был уведомлен об этом. Извините за доставленные неудобства!"
 
-msgid "Exporting posts..."
-msgstr "Экспорт постов..."
+#~ msgid "Exporting posts..."
+#~ msgstr "Экспорт постов..."
 
