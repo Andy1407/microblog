@@ -1,3 +1,13 @@
+$(document).ready(function () {
+    let a = setTimeout(function () {
+        let elem = Array.from(document.getElementsByClassName('alert alert-info'))
+        elem.forEach(elem => {
+            elem.remove()
+        })
+
+    }, 10000)
+})
+
 function remove_post(id) {
     let current_post = $(`#thisPost${id}`)
     let current_post2 = document.getElementById(`post-${id}`)
