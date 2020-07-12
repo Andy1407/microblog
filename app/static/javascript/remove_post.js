@@ -20,7 +20,7 @@ $(document).ready(function () {
                 }
             })
 
-        }, 2000)
+        }, 10000)
     })
 
     function remove_post(id, message) {
