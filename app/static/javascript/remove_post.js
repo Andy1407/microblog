@@ -6,7 +6,6 @@ $(document).ready(function () {
         let content = Array.from(document.getElementById('content').children)
 
         elem.forEach(elem => {
-            div.appendChild(elem)
             let anim = elem.animate({transform: `translate(0px, -${div.clientHeight}px)`}, 400)
             anim.addEventListener('finish', function () {
                 elem.remove()
