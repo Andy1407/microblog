@@ -14,8 +14,7 @@
             </a>
         </span>
                 {% endset %}
-                {{ _('%(username)s said %(when)s',
-                    username=user_link, when=moment(post.timestamp).fromNow()) }}
+                {{ user_link }} {{ moment(post.timestamp).fromNow() }}
                 <br>
                 <span id="post{{ post.id }}">{{ post.body }}</span>
                 {% if post.language and post.language != g.locale %}
@@ -33,6 +32,7 @@
             </td>
             {% if post.user_id == current_user.id %}
                 <td align="right">
+
                     <form action="javascript:remove_post({{ post.id }}, '{{ _('your post was deleted') }}')">
                         <button class="btn btn-danger">{{ _('remove') }}</button>
                     </form>

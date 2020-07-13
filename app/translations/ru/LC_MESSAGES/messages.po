@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-13 18:41+0300\n"
+"POT-Creation-Date: 2020-07-13 19:49+0300\n"
 "PO-Revision-Date: 2020-06-07 14:54+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -176,12 +176,7 @@ msgstr "Отправить Сообщение"
 msgid "An export task is currently in progress"
 msgstr "В настоящее время задача по экспорту в процессе"
 
-#: app/templates/_post.html:17
-#, python-format
-msgid "%(username)s said %(when)s"
-msgstr "%(username)s сообщает %(when)s"
-
-#: app/templates/_post.html:28
+#: app/templates/_post.html:27
 msgid "Translate"
 msgstr "Перевести"
 
@@ -329,14 +324,17 @@ msgstr "Упс! Произошла непредвиденная ошибка"
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "Администратор был уведомлен об этом. Извините за доставленные неудобства!"
 
-#: app/templates/errors/noJs.html:5
+#: app/templates/errors/badbrowser.html:5
 msgid "Your browser is outdated or javascript is disabled"
 msgstr "Ваш браузер устарел или у вас отключен javascript"
 
-#: app/templates/errors/noJs.html:6
+#: app/templates/errors/badbrowser.html:6
 msgid "Try updating your browser or enabling javascript"
 msgstr "Попробуйте обновить ваш браузер или включить javascript"
 
 #~ msgid "Exporting posts..."
 #~ msgstr "Экспорт постов..."
+
+#~ msgid "%(username)s said %(when)s"
+#~ msgstr "%(username)s сообщает %(when)s"
 
