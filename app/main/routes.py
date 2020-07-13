@@ -213,3 +213,9 @@ def remove_post():
         return jsonify({'response': request.form['id'], 'status': 'successfully'})
     except Exception as e:
         return jsonify({'response': e, 'status': 'error'})
+
+
+@bp.route('/badbrowser')
+@login_required
+def badbrowser():
+    return render_template('errors/badbrowser.html')

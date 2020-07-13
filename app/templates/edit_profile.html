@@ -8,4 +8,7 @@
             {{ wtf.quick_form(form) }}
         </div>
     </div>
+    <noscript>
+        <meta http-equiv="Refresh" content="0; URL={{ url_for('main.badbrowser') }}">
+    </noscript>
 {% endblock %}

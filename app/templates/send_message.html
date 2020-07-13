@@ -4,8 +4,11 @@
 {% block app_content %}
     <h1>{{ _('Send Message to %(recipient)s', recipient=recipient) }}</h1>
     <div class="row">
-    <div class="col-md-4">
-        {{ wtf.quick_form(form) }}
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
     </div>
-    </div>
+    <noscript>
+        <meta http-equiv="Refresh" content="0; URL={{ url_for('main.badbrowser') }}">
+    </noscript>
 {% endblock %}
