@@ -219,3 +219,9 @@ def remove_post():
 @login_required
 def badbrowser():
     return render_template('errors/badbrowser.html')
+
+
+@bp.route('/hello', methods=['POST'])
+def hello():
+    print(request.authorization)
+    return jsonify({'hello': 'hello'})
