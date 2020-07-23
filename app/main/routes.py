@@ -224,4 +224,9 @@ def badbrowser():
 @bp.route('/hello', methods=['POST'])
 def hello():
     print(request.authorization)
-    return jsonify({'hello': 'hello'})
+    print(request.form)
+    if request.authorization is None:
+        return jsonify(request.form)
+
+    else:
+        return jsonify(request.authorization)
