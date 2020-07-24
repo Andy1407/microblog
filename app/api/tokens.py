@@ -10,7 +10,7 @@ from app.models import User
 @basic_auth.login_required
 def get_token():
     username = basic_auth.username()
-    user = User.query.filter_by(username=username).first()
+    user = User.query.filter_by(username=username)
     token = g.current_user.get_token()
     db.session.commit()
     return jsonify({'token': token, 'id': user.id})
