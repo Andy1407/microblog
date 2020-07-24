@@ -20,7 +20,7 @@ def verify_password(username, password):
 
 @basic_auth.error_handler
 def basic_auth_error():
-    return error_response(401)
+    return error_response(401, "incorrect form")
 
 
 @token_auth.verify_token
@@ -31,4 +31,4 @@ def verify_token(token):
 
 @token_auth.error_handler
 def token_auth_error():
-    return error_response(401)
+    return error_response(401, "incorrect form token")
